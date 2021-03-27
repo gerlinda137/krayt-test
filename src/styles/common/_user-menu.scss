@@ -1,0 +1,32 @@
+.user-menu {
+  display: flex;
+  justify-self: flex-end;
+  // margin-left: 80px;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: $lato;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $secondary;
+    padding: 14px 21px;
+    white-space: nowrap;
+
+    &:hover {
+      box-shadow: 0 4px 16px rgba(255, 87, 34, 0.32);
+      background-color: $secondary;
+      color: $white;
+    }
+  }
+
+  @include media-tablet {
+    grid-area: user;
+  }
+}

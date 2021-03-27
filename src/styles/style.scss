@@ -1,5 +1,15 @@
+@import "utils/variables";
+
+@import "utils/fonts";
+
+@import "mixins/media";
+
 @import "common/global";
 
-@import "common/header";
+@import "common/main-header";
+
+@import "common/main-nav";
+
+@import "common/user-menu";
 
 @import "common/footer";
