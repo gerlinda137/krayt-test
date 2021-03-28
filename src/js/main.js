@@ -1,4 +1,5 @@
-// import Swiper from 'swiper';
+import Swiper from 'swiper/bundle';
+
 import 'swiper/swiper-bundle.css';
 
 import 'normalize.css';
@@ -28,3 +29,18 @@ if (window.innerWidth <= 1024) {
   mainNav.classList.remove(`main-nav--hidden`);
   userMenu.classList.remove(`user-menu--hidden`);
 }
+
+
+//  swiper
+
+new Swiper(`.introduction__slider`, {
+  speed: 400,
+  spaceBetween: 100,
+  slidesPerView: 1,
+
+  pagination: {
+    el: `.swiper-pagination`,
+    type: `bullets`,
+    clickable: true,
+  },
+});

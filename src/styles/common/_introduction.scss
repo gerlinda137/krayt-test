@@ -1,0 +1,82 @@
+.introduction {
+  &__mark {
+
+    @include mark ($basic-black);
+  }
+
+  &__container {
+    display: grid;
+    grid-template-areas:
+      "title txt"
+      "slider slider";
+    column-gap: 75px;
+    grid-template-columns: 1.7fr 1fr;
+    margin-top: 7px;
+
+    @include media-tablet {
+      grid-template-areas:
+        "title"
+        "txt"
+        "slider";
+      column-gap: 0;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    grid-area: title;
+    font-family: $lora;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 67px;
+    color: $brand-color;
+
+    @include media-tablet {
+      font-size: 36px;
+      line-height: 46px;
+    }
+  }
+
+  &__title-word {
+    color: $red;
+  }
+
+  &__txt {
+    grid-area: txt;
+    font-family: $lato;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $demi-black;
+    margin-top: 9px;
+  }
+
+  &__slider {
+    grid-area: slider;
+    margin-top: 32px;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  &__pagination {
+    bottom: 37px !important;
+
+    .swiper-pagination-bullet {
+      width: 16px;
+      height: 4px;
+      background-color: $white;
+      border-radius: 0;
+      opacity: 0.5;
+      margin: 0 2px !important;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 40px;
+      height: 4px;
+      background-color: $secondary;
+      border-radius: 0;
+      opacity: 1;
+    }
+  }
+}

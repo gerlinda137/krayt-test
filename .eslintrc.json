@@ -20,7 +20,8 @@
       "quotes": [
         "error",
         "backtick"
-      ]
+      ],
+      "no-new": "off"
     }
   }]
 }

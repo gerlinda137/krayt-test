@@ -1,7 +1,7 @@
 .user-menu {
   display: flex;
   justify-self: flex-end;
-  // margin-left: 80px;
+  column-gap: 10px;
 
   &--hidden {
     display: none;

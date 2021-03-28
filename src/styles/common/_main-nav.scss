@@ -1,5 +1,5 @@
 .main-nav {
-  padding-top: 10px;
+  padding-top: 5px;
 
   @include media-tablet {
     grid-area: nav;
@@ -23,7 +23,7 @@
   }
 
   &__list-item:not(:last-child) {
-    margin-right: 35px;
+    margin-right: 40px;
 
     @include media-tablet {
       margin-right: 0;

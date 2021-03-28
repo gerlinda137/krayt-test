@@ -4,6 +4,8 @@
 
 @import "mixins/media";
 
+@import "mixins/mark";
+
 @import "common/global";
 
 @import "common/main-header";
@@ -11,5 +13,9 @@
 @import "common/main-nav";
 
 @import "common/user-menu";
+
+@import "common/main-page";
+
+@import "common/introduction";
 
 @import "common/footer";
