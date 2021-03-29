@@ -1,0 +1,46 @@
+.space-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 467px;
+  width: 350px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    width: 72px;
+    height: 72px;
+    background-color: $secondary;
+    position: absolute;
+    background-image: url("../img/arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+    bottom: 49px;
+  }
+
+  &:hover {
+    .hovered-card {
+      display: flex;
+    }
+  }
+
+  &__img {
+    height: auto;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__title {
+    font-family: $lato;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: $basic-black;
+    margin: 0;
+  }
+
+  // &__hovered {}
+}

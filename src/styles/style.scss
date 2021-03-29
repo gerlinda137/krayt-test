@@ -2,9 +2,13 @@
 
 @import "utils/fonts";
 
+@import "utils/swiper";
+
 @import "mixins/media";
 
 @import "mixins/mark";
+
+@import "mixins/section-title";
 
 @import "common/global";
 
@@ -17,5 +21,13 @@
 @import "common/main-page";
 
 @import "common/introduction";
+
+@import "common/workspaces";
+
+@import "common/hovered-card";
+
+@import "common/space-card";
+
+@import "common/advantages";
 
 @import "common/footer";

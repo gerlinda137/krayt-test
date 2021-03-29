@@ -44,3 +44,18 @@ new Swiper(`.introduction__slider`, {
     clickable: true,
   },
 });
+
+new Swiper(`.workspaces__slider`, {
+  slidesPerView: 3,
+  spaceBetween: 30,
+
+  navigation: {
+    nextEl: `.swiper-button-next`,
+    prevEl: `.swiper-button-prev`,
+  },
+
+  pagination: {
+    el: `.swiper-pagination`,
+    type: `progressbar`,
+  },
+});
