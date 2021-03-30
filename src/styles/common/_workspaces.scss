@@ -27,7 +27,7 @@
 
   &__slider {
     overflow-x: hidden;
-    margin-bottom: 112px;
+    margin-bottom: 202px;
   }
 
   &__nav-wrapper {
@@ -72,16 +72,45 @@
   // .swiper-button-next {
   //   position: static;
   // }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 126px;
+    column-gap: 36px;
+  }
+
+  &__article {
+    background-color: $brand-color;
+    padding: 54px 53px 53px 53px;
+    color: $white;
+    width: 50%;
+  }
+
+  &__article-mark {
+
+    @include mark($white);
+  }
+
+  &__article-title {
+
+    @include section-title;
+
+    color: inherit;
+    max-width: 433px;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+
+  &__article-txt {
+    max-width: 433px;
+    width: 100%;
+    font-family: $lato;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: $white;
+    margin-bottom: 0;
+  }
 }
-
-// &__slide {}
-
-// &__info {}
-
-// &__article {}
-
-// &__article-mark {}
-
-// &__article-title {}
-
-// &__article-txt {}

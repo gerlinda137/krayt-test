@@ -1,11 +1,78 @@
-// .advantages {
-// }
+.advantages {
+  display: grid;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  width: 50%;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 8%;
+  padding-top: 36px;
+  padding-right: 37px;
+}
 
-// .advantages__item {
-// }
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-left: 65px;
+  position: relative;
 
-// .advantages__number {
-// }
+  &::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 8px;
+    top: 4px;
+  }
 
-// .advantages__term {
-// }
+  &:first-child::before {
+    background-image: url("../img/adv1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(2)::before {
+    background-image: url("../img/adv2.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(3)::before {
+    background-image: url("../img/adv3.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(4)::before {
+    background-image: url("../img/adv4.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:nth-child(5)::before {
+    background-image: url("../img/adv5.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:last-child::before {
+    background-image: url("../img/adv6.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.advantages__number {
+  font-family: $lora;
+  font-size: 32px;
+  line-height: 41px;
+  color: $brand-color;
+  margin-bottom: 8px;
+}
+
+.advantages__term {
+  font-family: $lato;
+  font-size: 16px;
+  line-height: 26px;
+  color: $grey1;
+}
