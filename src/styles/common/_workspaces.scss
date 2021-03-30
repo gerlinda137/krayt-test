@@ -28,7 +28,7 @@
   }
 
   &__slider {
-    overflow-x: hidden;
+    overflow: hidden;
     margin-bottom: 202px;
   }
 
@@ -52,13 +52,13 @@
 
     .swiper-button-next {
       width: 92px;
-      right: -35px !important;
+      right: -13px;
       background-image: url("../img/next-active.svg");
     }
 
     .swiper-button-prev {
       width: 53px;
-      right: 82px !important;
+      right: 100px;
       left: auto;
       background-image: url("../img/prev.svg");
     }

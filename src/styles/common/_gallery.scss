@@ -1,0 +1,90 @@
+.gallery {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  &__container {
+    position: absolute;
+    left: 54vw;
+    top: -6px;
+    background-color: #ffffff;
+  }
+
+  &__mark {
+
+    @include mark($brand-color);
+  }
+
+  &__title {
+
+    @include section-title;
+
+    max-width: 496px;
+    margin-top: 8px;
+  }
+
+  &__nav {
+    position: absolute;
+    left: 95vw;
+    top: 194px;
+
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      display: none;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      height: 26px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .swiper-button-next {
+      width: 92px;
+      right: -13px;
+      background-image: url("../img/next-active.svg");
+    }
+
+    .swiper-button-prev {
+      width: 53px;
+      right: 100px;
+      left: auto;
+      background-image: url("../img/prev.svg");
+    }
+  }
+
+  &__slider {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    width: 130%;
+    margin-left: -30%;
+
+    .swiper-slide-active {
+      height: 600px;
+      width: 445px;
+    }
+
+    .swiper-wrapper {
+      align-items: baseline;
+    }
+  }
+
+  &__slide {
+    width: 350px;
+    height: 350px;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+  }
+}

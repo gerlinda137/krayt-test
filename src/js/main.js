@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 
-import 'swiper/swiper-bundle.css';
+// import 'swiper/swiper-bundle.css';
 
 import 'normalize.css';
 
@@ -57,6 +57,19 @@ new Swiper(`.workspaces__slider`, {
   pagination: {
     el: `.swiper-pagination`,
     type: `progressbar`,
+  },
+});
+
+new Swiper(`.gallery__slider`, {
+  speed: 400,
+  spaceBetween: 30,
+  slidesPerView: `auto`,
+  centeredSlides: true,
+  loop: true,
+
+  navigation: {
+    nextEl: `.swiper-button-next`,
+    prevEl: `.swiper-button-prev`,
   },
 });
 
