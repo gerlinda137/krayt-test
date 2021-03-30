@@ -1,0 +1,21 @@
+.services {
+  display: flex;
+  flex-direction: column;
+
+  &__mark {
+
+    @include mark($brand-color);
+
+    width: fit-content;
+    margin-bottom: 9px;
+  }
+
+  &__title {
+    max-width: 570px;
+    width: 100%;
+
+    @include section-title;
+
+    margin-bottom: 56px;
+  }
+}

@@ -59,3 +59,46 @@ new Swiper(`.workspaces__slider`, {
     type: `progressbar`,
   },
 });
+
+
+// tabs
+
+const tabs = document.querySelector(`.tabs`);
+const tabsBtn = tabs.querySelectorAll(`.tabs__btn`);
+const tabsContent = tabs.querySelectorAll(`.tabs__content`);
+
+const tabsHandler = (path) => {
+  tabsContent.forEach((el) => {
+    el.classList.remove(`tabs__content--active`);
+  });
+  document.querySelector(`[data-tabs-target="${path}"]`).classList.add(`tabs__content--active`);
+};
+
+tabs.addEventListener(`click`, (e) => {
+  if (e.target.classList.contains(`tabs__btn`)) {
+    const tabsPath = e.target.dataset.tabsPath;
+    tabsBtn.forEach((el) => {
+      el.classList.remove(`tabs__btn--active`);
+    });
+    document.querySelector(`[data-tabs-path="${tabsPath}"]`).classList.add(`tabs__btn--active`);
+    tabsHandler(tabsPath);
+  }
+
+  if (e.target.classList.contains(`tabs__arrow--prev`)) {
+    const activeBtn = document.querySelector(`.tabs__btn--active`);
+    const activeParent = activeBtn.closest(`.tabs__item`);
+    const previousParent = activeParent.previousElementSibling;
+
+    if (previousParent) {
+      const prevActive = previousParent.querySelector(`.tabs__btn`);
+      tabsBtn.forEach((el) => {
+        el.classList.remove(`tabs__btn--active`);
+      });
+      prevActive.classList.add(`tabs__btn--active`);
+
+      const path = prevActive.dataset.tabsPath;
+      tabsHandler(path);
+    }
+  }
+
+});
