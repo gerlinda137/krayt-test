@@ -3,6 +3,7 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  margin-bottom: 112px;
 
   &__container {
     position: absolute;
@@ -59,7 +60,6 @@
 
   &__slider {
     display: flex;
-    align-items: baseline;
     position: relative;
     overflow: hidden;
     height: 600px;
@@ -72,7 +72,7 @@
     }
 
     .swiper-wrapper {
-      align-items: baseline;
+      align-items: flex-end;
     }
   }
 

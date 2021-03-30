@@ -61,7 +61,7 @@ new Swiper(`.workspaces__slider`, {
 });
 
 new Swiper(`.gallery__slider`, {
-  speed: 400,
+  speed: 0,
   spaceBetween: 30,
   slidesPerView: `auto`,
   centeredSlides: true,
