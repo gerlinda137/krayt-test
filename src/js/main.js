@@ -131,3 +131,22 @@ tabs.addEventListener(`click`, (e) => {
   }
 
 });
+
+// read more
+const showMoreBtns = document.querySelectorAll(`.faq__button`);
+const moreInfos = document.querySelectorAll(`.faq__more-info`);
+
+
+for (let i = 0; i < showMoreBtns.length; i++) {
+  showMoreBtns[i].onclick = function () {
+    if (moreInfos[i].style.visibility === `hidden`) {
+      moreInfos[i].style.visibility = `visible`;
+      moreInfos[i].style.height = `auto`;
+      moreInfos[i].style.margin = `10px 0 10px 0`;
+    } else {
+      moreInfos[i].style.visibility = `hidden`;
+      moreInfos[i].style.height = `0`;
+      moreInfos[i].style.margin = `0`;
+    }
+  };
+}
