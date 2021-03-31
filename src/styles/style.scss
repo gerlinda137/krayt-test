@@ -12,6 +12,8 @@
 
 @import "mixins/swiper-pagination";
 
+@import "mixins/link";
+
 @import "common/global";
 
 @import "common/main-header";
@@ -43,5 +45,9 @@
 @import "common/reviews";
 
 @import "common/faq";
+
+@import "common/events";
+
+@import "common/events-list";
 
 @import "common/footer";
