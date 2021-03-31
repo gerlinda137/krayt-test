@@ -1,0 +1,15 @@
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 104px;
+  width: 100%;
+
+  &__link {
+    &:hover {
+      svg path {
+        fill: $secondary;
+      }
+    }
+  }
+}

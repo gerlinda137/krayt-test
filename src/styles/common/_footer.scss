@@ -1,5 +1,35 @@
 .footer {
-  border:
-    1px
-    solid red;
+  background-color: $brand-color;
+  color: $white;
+  padding-bottom: 102px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 57px;
+  }
+
+
+  &__txt-social-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 255px;
+    width: 100%;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $lora;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 67px;
+  }
+
+  &__txt {
+    font-family: $lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 23px;
+  }
 }

@@ -1,0 +1,38 @@
+.footer-nav {
+  width: 100%;
+  max-width: 730px;
+  font-family: $lato;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 29px;
+  }
+
+  &__title {
+    font-family: $lato;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    opacity: 0.5;
+    margin: 0;
+    margin-bottom: 24px;
+  }
+
+  // &__sublist {}
+
+  &__sublist-item {
+    max-width: 212px;
+    width: 100%;
+    font-family: $lato;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 9px;
+
+    &--padding {
+      padding-left: 21px;
+    }
+  }
+}
