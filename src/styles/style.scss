@@ -4,13 +4,13 @@
 
 @import "utils/fonts";
 
-@import "utils/swiper";
-
 @import "mixins/media";
 
 @import "mixins/mark";
 
 @import "mixins/section-title";
+
+@import "mixins/swiper-pagination";
 
 @import "common/global";
 
@@ -39,5 +39,7 @@
 @import "common/gallery";
 
 @import "common/users";
+
+@import "common/reviews";
 
 @import "common/footer";

@@ -1,0 +1,16 @@
+@mixin pagination {
+  .swiper-pagination-progressbar {
+    width: 160px;
+    height: 4px;
+    background-color: #dfdfdf;
+    border-radius: 0;
+    left: 43%;
+    top: 651px;
+  }
+
+  .swiper-pagination-progressbar-fill {
+    height: 4px;
+    background-color: $red;
+    border-radius: 0;
+  }
+}

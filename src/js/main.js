@@ -73,6 +73,22 @@ new Swiper(`.gallery__slider`, {
   },
 });
 
+new Swiper(`.reviews__slider`, {
+  speed: 400,
+  spaceBetween: 30,
+  slidesPerView: `auto`,
+
+  navigation: {
+    nextEl: `.swiper-button-next`,
+    prevEl: `.swiper-button-prev`,
+  },
+
+  pagination: {
+    el: `.swiper-pagination`,
+    type: `progressbar`,
+  },
+});
+
 
 // tabs
 

@@ -30,6 +30,8 @@
   &__slider {
     overflow: hidden;
     margin-bottom: 202px;
+
+    @include pagination;
   }
 
   &__nav-wrapper {
