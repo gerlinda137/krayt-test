@@ -8,6 +8,15 @@
     align-items: center;
     margin-bottom: 39px;
     padding-right: 200px;
+
+    @include media-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include media-mobile {
+      padding-right: 0;
+    }
   }
 
   &__title {
@@ -15,6 +24,10 @@
     @include section-title;
 
     margin-right: 165px;
+
+    @include media-mobile {
+      margin-right: 0;
+    }
   }
 
   &__subtitle {
@@ -25,19 +38,60 @@
     color: $grey1;
     max-width: 452px;
     width: 100%;
+
+    @include media-mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__slider {
     overflow: hidden;
-    margin-bottom: 202px;
+    margin-bottom: 162px;
+    padding-bottom: 40px;
+    position: relative;
 
     @include pagination;
+
+    .swiper-pagination-progressbar {
+      top: 99%;
+    }
+
+    @include media-tablet {
+      margin-bottom: 130px;
+    }
+
+    @include media-mobile {
+      margin-bottom: 70px;
+      padding-bottom: 20px;
+
+
+      .swiper-pagination-progressbar {
+        top: 99%;
+      }
+    }
+
+    // @include media-custom (500px) {
+    //   .swiper-pagination-progressbar {
+    //     top: 45%;
+    //   }
+    // }
+
+    // @include media-custom (420px) {
+    //   .swiper-pagination-progressbar {
+    //     top: 35%;
+    //   }
+    // }
   }
 
   &__nav-wrapper {
     position: absolute;
     right: 34px;
     top: 75px;
+
+    @include media-mobile {
+      display: none;
+    }
 
     .swiper-button-prev::after,
     .swiper-button-next::after {
@@ -64,23 +118,18 @@
       left: auto;
       background-image: url("../img/prev.svg");
     }
-
-    // .swiper-button-active {
-    //   &::after {
-    //     background-image: url();
-    //   }
-    // }
   }
 
-  // .swiper-button-prev,
-  // .swiper-button-next {
-  //   position: static;
-  // }
 
   &__info {
     display: flex;
     justify-content: space-between;
     column-gap: 36px;
+
+    @include media-tablet {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
   }
 
   &__article {
@@ -88,6 +137,14 @@
     padding: 54px 53px 53px 53px;
     color: $white;
     width: 50%;
+
+    @include media-tablet {
+      width: 100%;
+    }
+
+    @include media-mobile {
+      padding: 30px 20px;
+    }
   }
 
   &__article-mark {
@@ -104,6 +161,10 @@
     width: 100%;
     margin-top: 8px;
     margin-bottom: 24px;
+
+    @include media-mobile {
+      margin-bottom: 16px;
+    }
   }
 
   &__article-txt {
@@ -115,5 +176,15 @@
     line-height: 30px;
     color: $white;
     margin-bottom: 0;
+
+    @include media-tablet {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include media-mobile {
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 }

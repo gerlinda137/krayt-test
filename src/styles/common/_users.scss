@@ -25,16 +25,16 @@
     margin-bottom: 66px;
   }
 
-  // &__img {
-
-  // }
-
   &__list {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     width: 100%;
+
+    @include media-mobile {
+      column-gap: 35px;
+    }
   }
 
   &__list-item {
@@ -42,6 +42,12 @@
 
     &:not(:last-child) {
       margin-right: 60px;
+    }
+
+    @include media-mobile {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 }

@@ -7,6 +7,19 @@
   row-gap: 8%;
   padding-top: 36px;
   padding-right: 37px;
+
+  @include media-tablet {
+    width: 100%;
+    justify-content: center;
+    column-gap: 15%;
+    padding-right: 0;
+  }
+
+  @include media-mobile {
+    width: 100%;
+    grid-auto-flow: initial;
+    margin-bottom: 120px;
+  }
 }
 
 .advantages__item {

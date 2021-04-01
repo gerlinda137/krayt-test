@@ -5,11 +5,22 @@
   position: relative;
   margin-bottom: 112px;
 
+  @include media-mobile {
+    align-items: initial;
+    margin-bottom: 60px;
+  }
+
   &__container {
     position: absolute;
     left: 54vw;
     top: -6px;
     background-color: #ffffff;
+
+    @include media-mobile {
+      position: static;
+      margin-left: 40px;
+      margin-bottom: 20px;
+    }
   }
 
   &__mark {
@@ -23,6 +34,15 @@
 
     max-width: 496px;
     margin-top: 8px;
+
+    @include media-custom (1340px) {
+      font-size: 36px;
+    }
+
+    @include media-tablet {
+      font-size: 29px;
+      line-height: 41px;
+    }
   }
 
   &__nav {
@@ -30,6 +50,17 @@
     left: 95vw;
     top: 194px;
 
+    @include media-custom (1340px) {
+      left: 100vw;
+    }
+
+    @include media-custom (980px) {
+      left: 110vw;
+    }
+
+    @include media-mobile {
+      display: none;
+    }
 
     .swiper-button-prev::after,
     .swiper-button-next::after {
@@ -66,9 +97,23 @@
     width: 130%;
     margin-left: -30%;
 
+    @include media-mobile {
+      height: auto;
+    }
+
     .swiper-slide-active {
       height: 600px;
       width: 445px;
+
+      @include media-custom (1340px) {
+        width: 350px;
+        height: 471px;
+      }
+
+      @include media-mobile {
+        width: 280px;
+        height: 280px;
+      }
     }
 
     .swiper-wrapper {
@@ -79,6 +124,11 @@
   &__slide {
     width: 350px;
     height: 350px;
+
+    @include media-mobile {
+      width: 280px;
+      height: 280px;
+    }
   }
 
   &__img {

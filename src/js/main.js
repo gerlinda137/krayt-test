@@ -8,6 +8,7 @@ const burgerBtn = document.querySelector(`.main-header__burger`);
 const mainNav = document.querySelector(`.main-nav`);
 const userMenu = document.querySelector(`.user-menu`);
 
+
 burgerBtn.onclick = function () {
   mainNav.classList.toggle(`main-nav--hidden`);
   userMenu.classList.toggle(`user-menu--hidden`);
@@ -19,16 +20,22 @@ burgerBtn.onclick = function () {
   }
 };
 
+const burgerMenuInit = function () {
+  if (window.innerWidth <= 1024) {
+    document.querySelector(`.main-header`).classList.add(`main-header--on-scroll`);
+    mainNav.classList.add(`main-nav--hidden`);
+    userMenu.classList.add(`user-menu--hidden`);
+  } else {
+    document.querySelector(`.main-header`).classList.remove(`main-header--on-scroll`);
+    mainNav.classList.remove(`main-nav--hidden`);
+    userMenu.classList.remove(`user-menu--hidden`);
+  }
+};
 
-if (window.innerWidth <= 1024) {
-  document.querySelector(`.main-header`).classList.add(`main-header--on-scroll`);
-  mainNav.classList.add(`main-nav--hidden`);
-  userMenu.classList.add(`user-menu--hidden`);
-} else {
-  document.querySelector(`.main-header`).classList.remove(`main-header--on-scroll`);
-  mainNav.classList.remove(`main-nav--hidden`);
-  userMenu.classList.remove(`user-menu--hidden`);
-}
+
+window.onresize = burgerMenuInit;
+
+burgerMenuInit();
 
 
 //  swiper
@@ -46,8 +53,8 @@ new Swiper(`.introduction__slider`, {
 });
 
 new Swiper(`.workspaces__slider`, {
-  slidesPerView: 3,
-  spaceBetween: 30,
+  // slidesPerView: 3,
+  // spaceBetween: 30,
 
   navigation: {
     nextEl: `.swiper-button-next`,
@@ -58,10 +65,28 @@ new Swiper(`.workspaces__slider`, {
     el: `.swiper-pagination`,
     type: `progressbar`,
   },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+
+    }
+  },
 });
 
 new Swiper(`.gallery__slider`, {
-  speed: 0,
+
   spaceBetween: 30,
   slidesPerView: `auto`,
   centeredSlides: true,
@@ -70,6 +95,16 @@ new Swiper(`.gallery__slider`, {
   navigation: {
     nextEl: `.swiper-button-next`,
     prevEl: `.swiper-button-prev`,
+  },
+
+  breakpoints: {
+    320: {
+      speed: 400,
+    },
+
+    768: {
+      speed: 0,
+    },
   },
 });
 

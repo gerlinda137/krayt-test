@@ -3,11 +3,36 @@
   column-gap: 8%;
   margin-bottom: 116px;
 
+  @include media-tablet {
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  @include media-mobile {
+    flex-direction: column;
+    column-gap: 0;
+    align-items: baseline;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;
     max-width: 293px;
     width: 100%;
+
+    // @include media-mobile {
+    //   flex-direction: row;
+    //   max-width: initial;
+    //   justify-content: space-between;
+    //   flex-wrap: wrap;
+    // }
+  }
+
+  &__list-item {
+
+    @include media-mobile {
+      width: 20%;
+    }
   }
 
   &__btn {
@@ -25,6 +50,13 @@
     width: 100%;
     cursor: pointer;
     transition: 0.3s;
+
+    @include media-mobile {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 10px 5px;
+      width: 100%;
+    }
 
     &:hover {
       box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.11);

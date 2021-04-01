@@ -38,6 +38,11 @@
       font-size: 36px;
       line-height: 46px;
     }
+
+    @include media-mobile {
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
 
   &__title-word {
@@ -52,6 +57,11 @@
     line-height: 30px;
     color: $demi-black;
     margin-top: 9px;
+
+    @include media-mobile {
+      font-size: 16px;
+      line-height: 26px;
+    }
   }
 
   &__slider {
