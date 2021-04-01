@@ -7,7 +7,7 @@ import 'normalize.css';
 const burgerBtn = document.querySelector(`.main-header__burger`);
 const mainNav = document.querySelector(`.main-nav`);
 const userMenu = document.querySelector(`.user-menu`);
-
+const navs = document.querySelectorAll(`.main-nav__list-item`);
 
 burgerBtn.onclick = function () {
   mainNav.classList.toggle(`main-nav--hidden`);
@@ -25,6 +25,14 @@ const burgerMenuInit = function () {
     document.querySelector(`.main-header`).classList.add(`main-header--on-scroll`);
     mainNav.classList.add(`main-nav--hidden`);
     userMenu.classList.add(`user-menu--hidden`);
+
+    navs.forEach((element) => {
+      element.onclick = () => {
+        burgerBtn.style.backgroundImage = `url('../img/menu.svg')`;
+        mainNav.classList.add(`main-nav--hidden`);
+        userMenu.classList.add(`user-menu--hidden`);
+      };
+    });
   } else {
     document.querySelector(`.main-header`).classList.remove(`main-header--on-scroll`);
     mainNav.classList.remove(`main-nav--hidden`);
