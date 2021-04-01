@@ -54,10 +54,6 @@
     max-width: 212px;
     width: 100%;
     margin-bottom: 9px;
-
-    &--padding {
-      padding-left: 21px;
-    }
   }
 
   &__sublist-link {
@@ -72,5 +68,9 @@
       opacity: 0.7;
       color: $secondary;
     }
+  }
+
+  &__sublist-padding {
+    padding-left: 21px;
   }
 }
